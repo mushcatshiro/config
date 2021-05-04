@@ -7,5 +7,5 @@ PS1+="\[${white}\] in ";
 PS1+="\[${green}\]\W"; # working directory
 PS1+=" >>> "
 export PS1;
-PATH=""
-export PATH
+#PATH=""
+#export PATH
