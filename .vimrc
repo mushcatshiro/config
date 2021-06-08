@@ -14,6 +14,8 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'preservim/nerdtree'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
@@ -28,6 +30,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+map <C-n> :NERDTreeToggle<CR>
 
 set number
 set ruler
@@ -47,6 +50,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
+let g:syntastic_aggregate_errors = 1
+let $PATH.=':' . '/home/shiro/.vim/bundle/syntastic/'
 
 autocmd Filetype python call SetPythonOptions()
 
@@ -56,7 +61,14 @@ function SetPythonOptions()
     set tabstop=4
     set shiftwidth=4
     set textwidth=79
+    set colorcolumn=79
     set softtabstop=4
     set expandtab
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 1
 endfunction
 
+autocmd VimEnter * NERDTree
+let NERDTreeShowHidden=1
