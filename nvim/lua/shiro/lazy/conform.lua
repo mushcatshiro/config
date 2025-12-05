@@ -10,7 +10,7 @@ return {
                     go = { "goimports" },
                     javascript = { "prettier" },
                     typescript = { "prettier" },
-                    elixir = { "mix" },
+                    python = { "ruff" },
                 },
                 formatters = {
                     ["clang-format"] = {

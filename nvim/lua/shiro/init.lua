@@ -1,6 +1,7 @@
 require("shiro.remap")
 require("shiro.set")
 require("shiro.lazy_init")
+require("shiro.theme").setup()
 
 local augroup = vim.api.nvim_create_augroup
 local ShiroGroup = augroup('ShiroGroup', {})
