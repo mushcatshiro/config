@@ -52,6 +52,12 @@ return {
                 end,
         }
     })
+    vim.lsp.config("ts_ls", {
+      -- capabilities = capabilities,
+      cmd = { "bun", "x", "typescript-language-server", "--stdio" },
+      -- filetypes = { "js", "ts" },
+    })
+    vim.lsp.enable("ts_ls")
     vim.diagnostic.config({
             -- update_in_insert = true,
             float = {

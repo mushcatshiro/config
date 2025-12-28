@@ -1,6 +1,7 @@
 local M = {}
 
 -- 1. THE PALETTE
+-- Define your core colors here.
 -- 'hex' is for gui/24bit, 'c' is for cterm/8bit (0-255)
 local colors = {
     bg       = { hex = "#1a1b26", c = "NONE" }, -- Example: TokyoNight-ish dark
@@ -16,6 +17,7 @@ local colors = {
 }
 
 -- 2. THE HIGHLIGHT GROUPS
+-- This is where the flexibility happens.
 local theme = {
     -- UI / Editor
     Normal       = { fg = colors.fg, bg = colors.bg },
